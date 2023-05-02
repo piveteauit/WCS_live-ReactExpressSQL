@@ -51,3 +51,14 @@ EXPRESS_PORT=<Express listening Port value>
 ### 11- Ajout d’une nouvelle ressource enfant à récupérer via l’API
 - [ ] Utiliser un router enfant
 
+
+
+Installation Dépendences back:
+```
+npm i dotenv express joi mysql2
+```
+
+Installation Dépendences front:
+```
+npm i axios
+```
