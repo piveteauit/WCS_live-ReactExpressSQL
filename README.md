@@ -1,10 +1,14 @@
 # WCS_live-ReactExpressSQL
-## Live coding du 02 mai 2023 pour l'utilisation d'Express + SQL + React
+## Live coding 2023-05-02: Express + SQL + React
 
 ### 1- Initialization du project
-
-- [ ] Découpage des dossier par services
-- [ ] Initialization des package.json
+- [ ] Découpage des briques pour refléter les flux 
+```
+|---------|                |-----------|                |-----------| 
+|  Front  | -------------> |   Back    | -------------> |  Données  | 
+| (React) | <------------- | (Express) | <------------- |  (MySQL)  | 
+|---------|                |-----------|                |-----------|
+```
 
 ### 2- Création du script d’initialization de base données
 - [ ] Création du schéma
@@ -51,14 +55,14 @@ EXPRESS_PORT=<Express listening Port value>
 ### 11- Ajout d’une nouvelle ressource enfant à récupérer via l’API
 - [ ] Utiliser un router enfant
 
-
-
-Installation Dépendences back:
+#
+#### Installation Dépendences back:
 ```
 npm i dotenv express joi mysql2
 ```
-
-Installation Dépendences front:
+#
+#### Installation Dépendences front:
 ```
 npm i axios
 ```
+#
