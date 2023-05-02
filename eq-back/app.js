@@ -2,6 +2,8 @@ const express = require('express');
 const getAllUsers = require('./src/functions/getAllUsers');
 const getUserById = require('./src/functions/getUserById');
 const createUser = require('./src/functions/createUser');
+const cors = require('cors');
+
 const EXPRESS_PORT = 3030;
 
 const app = express();
@@ -14,10 +16,17 @@ userRouter.get('/:user_id', getUserById);
 // Créer un user
 userRouter.post('', createUser);
 
+const corsOptions = {
+    origin: ['http://localhost:3000'],
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions))
+
 
 app.use('/users', userRouter)
 
 app.use(express.json());
+
 
 
 

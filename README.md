@@ -66,3 +66,19 @@ npm i dotenv express joi mysql2
 npm i axios
 ```
 #
+
+
+# ATTENTION
+```
+// Pour le back penser à configurer les cors
+npm i cors 
+```
+```
+const corsOptions = {
+    origin: ['http://localhost:3000'],
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions))
+
+
+```
