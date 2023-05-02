@@ -12,6 +12,14 @@
 
 ### 3- Création du fichier avec les variables d’environnement
 - [ ] Création du .sample pour savoir ce qui est attendu
+````
+DB_HOST=<DB Host value>
+DB_PORT=<DB Port value>
+DB_USER=<DB User value>
+DB_PASSWORD=<DB Password value>
+DB_NAME=<DB Name value>
+EXPRESS_PORT=<Express listening Port value>
+````
 
 ### 4- Initialization du server avec express
 - [ ] Connexion entre JS et la DB (via .env values)
