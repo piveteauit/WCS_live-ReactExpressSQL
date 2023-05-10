@@ -1,8 +1,17 @@
 const database = require('../config/database');
 
+const fields = [
+    "city", "email", "firstname", "id", "language", "lastname"
+]
+
 const getAllUsers = (request, response) => {
     
-    database.query('SELECT * FROM users')
+
+    /**
+     * city, email, firstname, id, language, lastname, password
+     */
+
+    database.query(`SELECT ${fields} FROM users`)
         .then(([results]) => {
             return response.json(results)
         })
