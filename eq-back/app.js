@@ -9,6 +9,13 @@ const EXPRESS_PORT = 3030;
 
 const app = express();
 
+const corsOptions = {
+    origin: ['http://localhost:3002'],
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions))
+app.use(express.json());
+
 const userRouter = express.Router();
 // Récupère tous les users
 userRouter.get('', getAllUsers);
@@ -16,20 +23,8 @@ userRouter.get('', getAllUsers);
 userRouter.get('/:user_id', getUserById);
 // Créer un user
 userRouter.post('', createUser);
-
-const corsOptions = {
-    origin: ['http://localhost:3002'],
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-app.use(cors(corsOptions))
+userRouter.put('/:user_id', updateUser)
 
 
 app.use('/users', userRouter)
-
-app.use(express.json());
-
-
-
-
-
 app.listen(EXPRESS_PORT, () => console.log('Server is running on: %s', EXPRESS_PORT))
