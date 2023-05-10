@@ -18,6 +18,10 @@ export function UserScreen() {
 
     if (!user) return null
 
+
+    // Afficher toutes les informations de l'utilisateur:
+            // firstname, lastname, email, city, language
+            // Les champs city et language doivent être modifiable
     return (
         <div>
             

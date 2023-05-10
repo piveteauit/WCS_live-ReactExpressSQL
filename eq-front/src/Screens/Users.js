@@ -3,7 +3,6 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 
-
 export function UsersScreen() {
     const [users, setUsers] = useState([]);
 
@@ -21,13 +20,12 @@ export function UsersScreen() {
     return (
         <div>
             <ul>
-                {users.map((user, index) => (
-                    <li key={`user_item_${index}`}>
-                        <Link to={`/users/${user.id}`} >
-                            {user.firstname}
-                        </Link>
-                    </li>
-                ))}
+
+                {/* 
+                    Afficher les utilisateurs avec une carte plus détaillé: 
+                            UserCard (firsname, lastname, email) 
+                            et lorsqu'on clique dessus on se rend sur l'écran d'un seul utilisateur 
+                */}
             </ul>
         </div>
     )

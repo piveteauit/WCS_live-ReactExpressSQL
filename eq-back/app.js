@@ -2,6 +2,7 @@ const express = require('express');
 const getAllUsers = require('./src/functions/getAllUsers');
 const getUserById = require('./src/functions/getUserById');
 const createUser = require('./src/functions/createUser');
+const updateUser = require('./src/functions/updateUser');
 const cors = require('cors');
 
 const EXPRESS_PORT = 3030;
