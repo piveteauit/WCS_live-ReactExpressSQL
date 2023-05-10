@@ -8,9 +8,17 @@ export function UsersScreen() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        console.log('TOTOT')
+        
         axios.get(`/users`)
-        .then(({data}) => setUsers(data))
+        .then(({data}) => {
+            console.log("Vraiment fini")
+            setUsers(data)
+        })
         .catch((err) => {console.log(err)})
+
+        console.log('TOTOT FINSHED')
+
     }, [])
 
 

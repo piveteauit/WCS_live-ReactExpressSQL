@@ -1,7 +1,7 @@
 const database = require('../config/database');
 
 const fields = [
-    "city", "email", "firstname", "id", "language", "lastname"
+    "email", "firstname", "id", "lastname"
 ]
 
 const getAllUsers = (request, response) => {

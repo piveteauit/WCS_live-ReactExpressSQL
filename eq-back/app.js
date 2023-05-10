@@ -1,8 +1,13 @@
 const express = require('express');
+
+const {deleteUserById, getAllUsers, getUserById, createUser, updateUser} = require("./src/functions");
+/*
 const getAllUsers = require('./src/functions/getAllUsers');
 const getUserById = require('./src/functions/getUserById');
 const createUser = require('./src/functions/createUser');
 const updateUser = require('./src/functions/updateUser');
+*/
+
 const cors = require('cors');
 
 const EXPRESS_PORT = 3030;
@@ -24,7 +29,7 @@ userRouter.get('/:user_id', getUserById);
 // Créer un user
 userRouter.post('', createUser);
 userRouter.put('/:user_id', updateUser)
-
+userRouter.delete('/:user_id', deleteUserById)
 
 app.use('/users', userRouter)
 app.listen(EXPRESS_PORT, () => console.log('Server is running on: %s', EXPRESS_PORT))
