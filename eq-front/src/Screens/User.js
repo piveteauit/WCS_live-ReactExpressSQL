@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { PasswordInput } from '../Components';
 
 import axios from 'axios';
 
@@ -9,7 +10,16 @@ export function UserScreen() {
 
     useEffect(() => {
         axios.get(`/users/${user_id}`)
-        .then(({data}) => setUser(data[0]))
+        .then(({data}) => {
+            console.log(data)
+            const fullname = `${data.firstname} ${data.lastname.toUpperCase()}`;
+            // data.fullname = fullname
+            // setUser(data)
+            setUser({
+                ...data,
+                fullname
+            })
+        })
         .catch((err) => {console.log(err)})
     }, [user_id])
 
@@ -24,14 +34,16 @@ export function UserScreen() {
             // Les champs city et language doivent être modifiable
     return (
         <div>
-            
             <p>
-                {user.firstname}
+                {user.fullname}
             </p>
             <p>
                 {user.email}
             </p>
         
+
+            <PasswordInput {...user} />
+
         </div>
     )
 

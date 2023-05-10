@@ -4,7 +4,7 @@ const getUserById = (request, response) => {
     
     database.query('SELECT * FROM users WHERE id = ?', [request.params.user_id])
         .then(([results]) => {
-            return response.json(results)
+            return response.json(results[0])
         })
         .catch((err) => {
             console.log(err)

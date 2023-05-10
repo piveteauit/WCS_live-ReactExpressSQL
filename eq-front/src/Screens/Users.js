@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import { UserCard } from '../Components/UserCard';
 
 
 export function UsersScreen() {
@@ -20,6 +21,12 @@ export function UsersScreen() {
     return (
         <div>
             <ul>
+
+                {
+                    users.map((user) => {
+                        return <UserCard {...user}  key={`user_${user.id}`} />
+                    })
+                }
 
                 {/* 
                     Afficher les utilisateurs avec une carte plus détaillé: 

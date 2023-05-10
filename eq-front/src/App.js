@@ -14,6 +14,8 @@ function App() {
         <Routes>
           <Route path='users' element={<UsersScreen />} />
           <Route path='users/:user_id' element={<UserScreen />} />
+
+          <Route path='*' element={<UsersScreen />} />
         </Routes>
       </BrowserRouter>
     </div>

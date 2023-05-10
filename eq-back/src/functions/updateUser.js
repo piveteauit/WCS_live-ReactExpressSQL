@@ -8,4 +8,4 @@ const updateUser = (request, response) => {
     })
 };
 
-module.exports = createUser;
+module.exports = updateUser;
