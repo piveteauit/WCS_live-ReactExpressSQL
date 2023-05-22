@@ -1,6 +1,5 @@
 import './App.css';
-import { UsersScreen } from './Screens/Users';
-import { UserScreen } from './Screens/User';
+import { HomeScreen, UsersScreen, UserScreen } from './Screens';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
@@ -15,7 +14,7 @@ function App() {
           <Route path='users' element={<UsersScreen />} />
           <Route path='users/:user_id' element={<UserScreen />} />
 
-          <Route path='*' element={<UsersScreen />} />
+          <Route path='*' element={<HomeScreen />} />
         </Routes>
       </BrowserRouter>
     </div>

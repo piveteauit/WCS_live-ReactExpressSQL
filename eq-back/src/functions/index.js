@@ -1,7 +1,7 @@
 module.exports = {
-    createUser: require('./createUser'),
-    getAllUsers: require('./getAllUsers'),
-    getUserById: require('./getUserById'),
-    updateUser: require('./updateUser'),
-    deleteUserById: require('./deleteUserById'),
+    createUser: require('./users/createUser'),
+    getAllUsers: require('./users/getAllUsers'),
+    getUserById: require('./users/getUserById'),
+    updateUser: require('./users/updateUser'),
+    deleteUserById: require('./users/deleteUserById'),
 }

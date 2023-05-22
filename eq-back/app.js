@@ -1,6 +1,5 @@
 const express = require('express');
-
-const {deleteUserById, getAllUsers, getUserById, createUser, updateUser} = require("./src/functions");
+const userRouter = require('./src/routes/users');
 /*
 const getAllUsers = require('./src/functions/getAllUsers');
 const getUserById = require('./src/functions/getUserById');
@@ -21,15 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(express.json());
 
-const userRouter = express.Router();
-// Récupère tous les users
-userRouter.get('', getAllUsers);
-// Récupère un user
-userRouter.get('/:user_id', getUserById);
-// Créer un user
-userRouter.post('', createUser);
-userRouter.put('/:user_id', updateUser)
-userRouter.delete('/:user_id', deleteUserById)
+
 
 app.use('/api/users', userRouter)
 app.listen(EXPRESS_PORT, () => console.log('Server is running on: %s', EXPRESS_PORT))

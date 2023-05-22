@@ -1,4 +1,4 @@
-const database = require('../config/database');
+const database = require('../../config/database');
 
 const getUserById = (request, response) => {
     database.query('SELECT city, email, firstname, id, language, lastname FROM users WHERE id = ?', [request.params.user_id])
