@@ -4,7 +4,7 @@ import { UserScreen } from './Screens/User';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3030'
+axios.defaults.baseURL = '/api/'
 
 
 function App() {

@@ -31,7 +31,7 @@ export function UserCard ({id, firstname, lastname, email}) {
     return (
         <div style={{margin: 10, background: deleted ? 'rgba(255, 100, 100, 0.3)' : 'rgba(100, 100, 100, 0.1)'}}>
             <span> {firstname} {lastname} </span>
-            <Link to={`users/${id}`}>
+            <Link to={`/users/${id}`}>
                 {email}
             </Link>
 

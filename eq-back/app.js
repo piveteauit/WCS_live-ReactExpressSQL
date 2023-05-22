@@ -31,5 +31,5 @@ userRouter.post('', createUser);
 userRouter.put('/:user_id', updateUser)
 userRouter.delete('/:user_id', deleteUserById)
 
-app.use('/users', userRouter)
+app.use('/api/users', userRouter)
 app.listen(EXPRESS_PORT, () => console.log('Server is running on: %s', EXPRESS_PORT))
